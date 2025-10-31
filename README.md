@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS especialidades (
     descripcion VARCHAR(255)
 );
 
--- 4️Tabla de doctores
+-- Tabla de doctores
 CREATE TABLE IF NOT EXISTS doctores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
