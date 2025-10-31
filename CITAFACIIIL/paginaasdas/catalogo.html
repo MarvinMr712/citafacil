@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CitaFácil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Animaciones AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="menu container">
+      <div style="text-align:center; margin-top:30px;">
+  <a href="index.html" class="btn-2">⬅ </a>
+</div>
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="CitaFácil" class="logo-img">
+        <span class="logo-text">CitaFácil</span>
+      </a>
+      
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#registrar-cita">Agendar Cita</a></li>
+          <li><a href="#stock">Citas Registradas</a></li>
+          <li><a href="catalogo.html">Reservar una cita </a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+
+    <div class="header-content container" data-aos="fade-up">
+      <div class="header-txt">
+        <h1>Agenda tu cita médica</h1>
+        <p>Reserva en línea de manera rápida, sencilla y segura</p>
+        <a href="#registrar-cita" class="btn-1">Agendar Ahora</a>
+      </div>
+      
+      <div class="header-img" data-aos="zoom-in">
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FORMULARIO DE CITA ===== -->
+  <section id="registrar-cita" class="container" data-aos="fade-right">
+    <h2>Registrar Nueva Cita</h2>
+    <form id="citaForm" class="form-cita">
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label for="especialidad">Especialidad:</label>
+        <select id="especialidad" name="especialidad" required>
+          <option value="">Seleccione...</option>
+          <option value="Medicina General">Medicina General</option>
+          <option value="Pediatría">Pediatría</option>
+          <option value="Cardiología">Cardiología</option>
+          <option value="Dermatología">Dermatología</option>
+          <option value="Laboratorio">Laboratorio</option>
+          <option value="Rayos X">Rayos X</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+      <div class="form-group">
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+      </div>
+      <div class="form-group">
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn-2">Confirmar Cita</button>
+    </form>
+    <p id="mensajeExito" class="exito"></p>
+  </section>
+
+  <!-- ===== CITAS REGISTRADAS ===== -->
+  <section id="stock" class="catalogo container" data-aos="fade-up">
+    <h2>Citas Registradas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Paciente</th>
+          <th>Especialidad</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCitas"></tbody>
+    </table>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section id="nosotros" class="container" data-aos="fade-left">
+    <h2>Sobre Nosotros</h2>
+    <p>CitaFácil es una plataforma digital que te permite reservar tus citas médicas en línea con especialistas de distintas áreas. Nuestro objetivo es hacer que tu experiencia en salud sea rápida, confiable y sin complicaciones.</p>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section id="contacto" class="formulario" data-aos="fade-up">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre completo" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-logo" data-aos="fade-right">
+        <img src="images/logo.png" alt="CitaFácil" />
+        <p>Agenda tus citas médicas de forma rápida y segura.</p>
+      </div>
+      <div class="footer-links" data-aos="fade-up">
+        <h3>Redes Sociales</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+      <div class="footer-links" data-aos="fade-left">
+        <h3>Empresa</h3>
+        <ul>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CitaFácil - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Librería AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
